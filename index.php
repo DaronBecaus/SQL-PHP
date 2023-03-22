@@ -24,3 +24,18 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
+
+echo "<br>";
+
+// inserindo via php
+try {
+    $conn = new  PDO("mysql:host=localhost;dbname=projeto01", "root", "");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = "INSERT INTO pessoas (nome, idade) VALUES ('Enzo', 14)";
+    $conn->exec($sql);
+    echo "dado inserido com sucesso...";
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+echo "<br>";

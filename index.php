@@ -45,7 +45,7 @@ try {
     $conn = new  PDO("mysql:host=localhost;dbname=projeto01", "root", "");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "SELECT * FROM pessoas";
-    $resultado = %conn->query($sql);
+    $resultado = $conn->query($sql);
     var_dump($resultado);
     echo "--------------";
     $lista = $resultado->fetchAll();

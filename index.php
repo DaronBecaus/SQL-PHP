@@ -73,6 +73,7 @@ try {
         table tr td {
             border: 1px solid black;
             padding: 0 1rem 0 1rem;
+            text-align: center;
         }
     </style>
 </head>

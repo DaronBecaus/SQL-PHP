@@ -1,8 +1,8 @@
 <?php
-
+require_once "pessoas.php";
 $id_pessoa = $_GET['id'];
 try {
-    $pessoa = new Pessoa($id_pessoa);
+    $pessoa = new Pessoas($id_pessoa);
     $pessoa->deletar();
     header('location: index.php');
 } catch (Exception $e) {

@@ -1,5 +1,5 @@
 <?php
-
+require_once "conexao.php";
 class Pessoas
 {
     public $id_pessoa;

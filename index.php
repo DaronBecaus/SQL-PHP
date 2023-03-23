@@ -72,9 +72,14 @@ try {
 
         table tr th,
         table tr td {
-            border: 1px solid black;
+            border: 1px solid white;
             padding: 0 1rem 0 1rem;
             text-align: center;
+        }
+
+        table tr th a {
+            text-decoration: none;
+            color: white;
         }
     </style>
 </head>

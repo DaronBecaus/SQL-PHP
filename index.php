@@ -108,6 +108,7 @@ try {
 </head>
 
 <body>
+    <hr>
     <table>
         <tr>
             <th>Id</th>

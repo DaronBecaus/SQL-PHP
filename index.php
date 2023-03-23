@@ -91,14 +91,17 @@ try {
 
         .add:hover {
             background-color: #dfffc4;
+            cursor: pointer;
         }
 
         .delet:hover {
             background-color: #ffae7f;
+            cursor: pointer;
         }
 
         .edit:hover {
             background-color: #c9bffc;
+            cursor: pointer;
         }
 
         .icon img {

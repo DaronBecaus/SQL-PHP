@@ -15,3 +15,4 @@ class Conexao
         return $conexao;
     }
 }
+// "mysql:host=localhost;dbname=projeto01" , "root", ""

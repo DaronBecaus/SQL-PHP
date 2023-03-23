@@ -64,14 +64,25 @@ try {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        table tr th,
+        table tr td {
+            border: 1px solid black;
+            padding: 0 1rem 0 1rem;
+        }
+    </style>
 </head>
 
 <body>
     <table>
         <tr>
-            <th>id</th>
-            <th>nome</th>
-            <th>idade</th>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Idade</th>
         </tr>
         <?php foreach ($lista as $p) : ?>
             <tr>

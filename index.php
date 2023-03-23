@@ -65,21 +65,44 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            background-color: black;
-            color: white;
+        table {
+            border-collapse: collapse;
         }
 
         table tr th,
         table tr td {
-            border: 1px solid white;
+            border: 1px solid black;
             padding: 0 1rem 0 1rem;
             text-align: center;
         }
 
-        table tr th a {
+        table tr th a,
+        table tr td a {
             text-decoration: none;
-            color: white;
+        }
+
+        th a,
+        td a {
+            display: flex;
+            align-items: center;
+            padding: .1rem;
+            justify-content: center;
+        }
+
+        .add:hover {
+            background-color: #dfffc4;
+        }
+
+        .delet:hover {
+            background-color: #ffae7f;
+        }
+
+        .edit:hover {
+            background-color: #c9bffc;
+        }
+
+        .icon img {
+            padding: 0 5px 0 5px;
         }
     </style>
 </head>
@@ -90,8 +113,8 @@ try {
             <th>Id</th>
             <th>Nome</th>
             <th>Idade</th>
-            <th colspan="2">
-                <a href="adicionar.php">Adicionar</a>
+            <th colspan="2" class="icon add">
+                <a href="adicionar.php" style="color:green;"><span><img src="plus.png" width="20px"></span>Adicionar Novo</a>
             </th>
         </tr>
         <?php foreach ($lista as $p) : ?>
@@ -99,6 +122,12 @@ try {
                 <td><?= $p['id_pessoa']; ?></td>
                 <td><?= $p['nome']; ?></td>
                 <td><?= $p['idade']; ?></td>
+                <td class="icon edit">
+                    <a href="editar.php?id=<?= $p['id_pessoa']; ?>" style="color:blue;"><span><img src="edit.png" width="24px"></span> Editar</a>
+                </td>
+                <td class="icon delet">
+                    <a href="deletar.php?id=<?= $p['id_pessoa']; ?>" style="color:red;"><span><img src="remove.png" width="20px"></span>Deletar</a>
+                </td>
             </tr>
         <?php endforeach; ?>
     </table>

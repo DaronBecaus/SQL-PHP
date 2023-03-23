@@ -39,3 +39,19 @@ try {
 }
 
 echo "<br>";
+
+// buscando dados via php
+try {
+    $conn = new  PDO("mysql:host=localhost;dbname=projeto01", "root", "");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = "SELECT * FROM pessoas";
+    $resultado = %conn->query($sql);
+    var_dump($resultado);
+    echo "--------------";
+    $lista = $resultado->fetchAll();
+    var_dump($lista);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+echo "<br>";

@@ -67,6 +67,8 @@ try {
     <style>
         table {
             border-collapse: collapse;
+            width: 100%;
+            background-color: #d0e0eb;
         }
 
         table tr th,
@@ -89,12 +91,17 @@ try {
             justify-content: center;
         }
 
+        .cont {
+            width: 7%;
+            background-color: #ebf7f8;
+        }
+
         .add:hover {
             background-color: #dfffc4;
             cursor: pointer;
         }
 
-        .delet:hover {
+        .delete:hover {
             background-color: #ffae7f;
             cursor: pointer;
         }
@@ -117,7 +124,7 @@ try {
             <th>Id</th>
             <th>Nome</th>
             <th>Idade</th>
-            <th colspan="2" class="icon add">
+            <th colspan="2" class="icon add cont">
                 <a href="adicionar.php" style="color:green;"><span><img src="plus.png" width="20px"></span>Adicionar Novo</a>
             </th>
         </tr>
@@ -126,10 +133,10 @@ try {
                 <td><?= $p['id_pessoa']; ?></td>
                 <td><?= $p['nome']; ?></td>
                 <td><?= $p['idade']; ?></td>
-                <td class="icon edit">
+                <td class="icon edit cont">
                     <a href="editar.php?id=<?= $p['id_pessoa']; ?>" style="color:blue;"><span><img src="edit.png" width="24px"></span> Editar</a>
                 </td>
-                <td class="icon delet">
+                <td class="icon delete cont">
                     <a href="deletar.php?id=<?= $p['id_pessoa']; ?>" style="color:red;"><span><img src="remove.png" width="20px"></span>Deletar</a>
                 </td>
             </tr>

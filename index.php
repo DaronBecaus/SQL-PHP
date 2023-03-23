@@ -25,7 +25,7 @@ try {
     echo $e->getMessage();
 }
 
-echo "<br>";
+/* echo "<br>";
 
 // inserindo via php
 try {
@@ -38,7 +38,7 @@ try {
     echo $e->getMessage();
 }
 
-echo "<br>";
+echo "<br>"; */
 
 // buscando dados via php
 try {
@@ -67,7 +67,20 @@ try {
 </head>
 
 <body>
-
+    <table>
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>idade</th>
+        </tr>
+        <?php foreach ($lista as $p) : ?>
+            <tr>
+                <td><?= $p['id_pessoa']; ?></td>
+                <td><?= $p['nome']; ?></td>
+                <td><?= $p['idade']; ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
 </body>
 
 </html>

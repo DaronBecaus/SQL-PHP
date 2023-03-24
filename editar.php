@@ -24,7 +24,7 @@ try {
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome" value="<?= $pessoas->nome; ?>">
         <label for="idade">Idade:</label>
-        <input type="number" name="idade" id="idade" value="<?= $pessoa->idade; ?>">
+        <input type="number" name="idade" id="idade" value="<?= $pessoas->idade; ?>">
         <input type="submit" value="Atualizar">
     </form>
 </body>

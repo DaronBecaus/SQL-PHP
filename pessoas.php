@@ -54,6 +54,11 @@ class Pessoas
     {
         $sql = "UPDATE pessoas SET nome = :nome, idade = :idade WHERE id_pessoa = :id_pessoa"
         $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindValue(":nome", $this->nome);
+        $stmt->bindValue(":idade", $this->idade);
+        $stmt->bindValue(":id_pessoa", $this->id_pessoa);
+        $stmt->execute();
     }
 
     public function deletar()

@@ -7,7 +7,7 @@ try {
     $pessoas->nome = $nome;
     $pessoas->idade = $idade;
     $pessoas->inserir();
-    header('location:');
+    header('location: index.php');
 } catch (Exception $e) {
     echo $e->getMessage();
 }

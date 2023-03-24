@@ -42,17 +42,18 @@ class Pessoas
         $stmt->execute();
     }
 
-    public static function listar()
+    public static function lista()
     {
         $sql = "SELECT * FROM pessoas";
         $conexao = Conexao::conectar();
-        $resultado = $resultado->fetchAll();
+        $resultado = $conexao->query($sql);
+        $lista = $resultado->fetchAll();
         return $lista;
     }
 
     public function atualizar()
     {
-        $sql = "UPDATE pessoas SET nome = :nome, idade = :idade WHERE id_pessoa = :id_pessoa"
+        $sql = "UPDATE pessoas SET nome = :nome, idade = :idade WHERE id_pessoa = :id_pessoa";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(":nome", $this->nome);

@@ -1,5 +1,5 @@
 <?php
-// criando e testando conexão 
+/* // criando e testando conexão 
 try {
     $conn = new  PDO("mysql:host=localhost;dbname=projeto01", "root", "");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -25,7 +25,7 @@ try {
     echo $e->getMessage();
 }
 
-/* echo "<br>";
+echo "<br>";
 
 // inserindo via php
 try {
@@ -38,7 +38,7 @@ try {
     echo $e->getMessage();
 }
 
-echo "<br>"; */
+echo "<br>";
 
 // buscando dados via php
 try {
@@ -51,6 +51,13 @@ try {
     $lista = $resultado->fetchAll();
     // var_dump($lista);
 } catch (PDOException $e) {
+    echo $e->getMessage();
+} */
+
+require_once "pessoas.php";
+try {
+    $lista = Pessoas::lista();
+} catch (Exception $e) {
     echo $e->getMessage();
 }
 

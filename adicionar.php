@@ -9,7 +9,13 @@
 </head>
 
 <body>
-
+    <form action="adicionar_controller.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade">
+        <input type="submit" value="Cadastrar">
+    </form>
 </body>
 
 </html>

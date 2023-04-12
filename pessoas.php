@@ -10,7 +10,7 @@ class Pessoas
     // CREATE = criar
     // READ = ler ou buscar
     // UPDATE = atualizar
-    // DELETe = deletar
+    // DELETE = deletar
 
     public function __construct($id_pessoa = false)
     {
